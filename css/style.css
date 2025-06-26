@@ -5,6 +5,11 @@
     --dark-brown: #4B3621;
     --accent: #C8A97E;
     --text: #333333;
+    
+    --transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.menu-item, .btn, .nav-links a {
+    transition: var(--transition);
 }
 
 * {
@@ -189,16 +194,23 @@ section {
 }
 
 /* О нас */
-.about {
-    background-color: var(--light-beige);
-    text-align: center;
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
+.about-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Меню */

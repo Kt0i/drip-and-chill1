@@ -47,3 +47,9 @@ window.addEventListener('scroll', () => {
         header.style.padding = '25px 0';
     }
 });
+
+document.querySelector('.order-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+    this.reset();
+});
