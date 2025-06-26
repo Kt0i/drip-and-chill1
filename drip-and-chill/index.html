@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip & Chill - Кофейня в Алматы</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Drip & Chill</a>
+            <nav class="nav-links">
+                <a href="#about">О нас</a>
+                <a href="#menu">Меню</a>
+                <a href="#order">Заказ</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <button class="burger-menu" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Главный экран -->
+    <section class="hero">
+    <div class="hero-content">
+        <h1>Кофе — как стиль жизни</h1>
+        <p>Наслаждайтесь лучшими сортами кофе в уютной атмосфере</p>
+        <a href="#menu" class="btn scroll-link">Смотреть меню ↓</a>
+    </div>
+    </section>
+    
+    <!-- О нас -->
+    <section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">О нас</h2>
+        <div class="about-content">
+            <img src="images/cafe-interior.jpg" alt="Интерьер кофейни" class="about-image" loading="lazy">
+            <div class="about-text">
+                <p>Мы — уютная кофейня в самом центре Алматы. Наливаем specialty кофе, готовим десерты и создаём атмосферу, в которой хочется остаться подольше. Наша миссия — делать каждый ваш день вкуснее с чашкой идеально приготовленного кофе.</p>
+                <p>Каждое утро мы жарим свежие зёрна и приветствуем гостей ароматом настоящего кофе.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Меню -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Наше меню</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/espresso.jpg" alt="Чашка эспрессо" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Эспрессо</h3>
+                        <p class="menu-item-price">600 ₸</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="images/latte.jpg" alt="Чашка латте" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Латте</h3>
+                        <p class="menu-item-price">800 ₸</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="images/flat-white.jpg" alt="Чашка флэт уайт" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Флэт уайт</h3>
+                        <p class="menu-item-price">900 ₸</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="images/cheesecake.jpg" alt="Кусок чизкейка" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Чизкейк</h3>
+                        <p class="menu-item-price">1200 ₸</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Форма заказа -->
+    <section class="order" id="order">
+        <div class="container">
+            <h2 class="section-title">Предзаказ</h2>
+            <form class="order-form">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required placeholder="Как к вам обращаться?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__" pattern="^\+7\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}$">
+                </div>
+                
+                <div class="form-group">
+                    <label for="order-items">Что вы хотите заказать?</label>
+                    <select id="order-items" required>
+                        <option value="" disabled selected>Выберите из меню</option>
+                        <option value="espresso">Эспрессо — 600 ₸</option>
+                        <option value="latte">Латте — 800 ₸</option>
+                        <option value="flat-white">Флэт уайт — 900 ₸</option>
+                        <option value="cheesecake">Чизкейк — 1200 ₸</option>
+                        <option value="other">Другое (указать в комментарии)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Дополнительные пожелания</label>
+                    <textarea id="notes" placeholder="Например, время готовности или особые пожелания"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Заказать</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-info">
+                <p><strong>Адрес:</strong> г. Алматы, ул. Панфилова 25</p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/dripandchill" class="social-link" target="_blank" rel="noopener noreferrer">@dripandchill</a></p>
+                <p><strong>Часы работы:</strong> ежедневно с 8:00 до 22:00</p>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.776653030065!2d76.94527731548427!3d43.23548287913786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883695a6f7f4f0d%3A0x3cdf6e7e0b1a3b1!2z0YPQu9C40YbQsCDQn9Cw0NTQndC-0LLQvtC90LAgMjUsINCQ0LvQvNCw0YLRiyAwNTAwMDA!5e0!3m2!1sru!2skz!4v1620000000000!5m2!1sru!2skz" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-label="Карта с расположением кофейни">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Drip & Chill. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
